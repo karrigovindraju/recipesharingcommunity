@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Recipe Sharing Community</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Recipe Sharing Community</h1>
+      <button id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
+    </header>
+
+    <div id="loginPage">
+      <h2>Login</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? <a href="#" onclick="showRegistrationForm()">Register</a></p>
+    </div>
+
+    <div id="registrationForm" style="display: none;">
+      <h2>Register</h2>
+      <label for="newUsername">Username:</label>
+      <input type="text" id="newUsername" required>
+      <label for="newPassword">Password:</label>
+      <input type="password" id="newPassword" required>
+      <button onclick="register()">Register</button>
+      <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+    </div>
+
+    <div id="recipePage" style="display: none;">
+      <h2 id="currentUser"></h2>
+      <h3 id="welcomeMessage"></h3>
+      <button onclick="showAddRecipeForm()">Add Recipe</button>
+      <div id="recipeList"></div>
+    </div>
+
+    <div id="recipeForm" style="display: none;">
+      <h2>Add/Edit Recipe</h2>
+      <label for="recipeName">Recipe Name:</label>
+      <input type="text" id="recipeName" required>
+      <label for="recipeContent">Recipe Content:</label>
+      <textarea id="recipeContent" required></textarea>
+      <button id="saveBtn" onclick="saveRecipe()">Save Recipe</button>
+      <button onclick="cancelRecipe()">Cancel</button>
+    </div>
+    
+    <div id="footerBox">
+      <footer>
+        <p>A Website made by Pragathiswaar AK, Karri Govind Raju and Nazzi Firzith for CSE326 project.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
